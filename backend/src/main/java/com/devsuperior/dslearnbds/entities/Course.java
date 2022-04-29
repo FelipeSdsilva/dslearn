@@ -21,8 +21,8 @@ public class Course implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	private String imgUrl;
-	private String imgGrayUrl;
+	private String imgUri;
+	private String imgGrayUri;
 	
 	@OneToMany(mappedBy = "course")
 	private List<Offer> offers = new ArrayList<>();
@@ -30,12 +30,12 @@ public class Course implements Serializable {
 	public Course() {
 	}
 
-	public Course(Long id, String name, String imgUrl, String imgGrayUrl) {
+	public Course(Long id, String name, String imgUri, String imgGrayUri) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.imgUrl = imgUrl;
-		this.imgGrayUrl = imgGrayUrl;
+		this.imgUri = imgUri;
+		this.imgGrayUri = imgGrayUri;
 	}
 
 	public Long getId() {
@@ -54,20 +54,20 @@ public class Course implements Serializable {
 		this.name = name;
 	}
 
-	public String getImgUrl() {
-		return imgUrl;
+	public String getimgUri() {
+		return imgUri;
 	}
 
-	public void setImgUrl(String imgUrl) {
-		this.imgUrl = imgUrl;
+	public void setimgUri(String imgUri) {
+		this.imgUri = imgUri;
 	}
 
-	public String getImgGrayUrl() {
-		return imgGrayUrl;
+	public String getimgGrayUri() {
+		return imgGrayUri;
 	}
 
-	public void setImgGrayUrl(String imgGrayUrl) {
-		this.imgGrayUrl = imgGrayUrl;
+	public void setimgGrayUri(String imgGrayUri) {
+		this.imgGrayUri = imgGrayUri;
 	}
 
 	public List<Offer> getOffers() {
