@@ -13,7 +13,7 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
 
-INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Seu curso está disponivel',TIMESTAMP WITH TIME ZONE '2020-11-20T03:00:00Z','FALSE' ,'cursos/Bootcamp JAVA',1)
+INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Seu curso está disponivel',TIMESTAMP WITH TIME ZONE '2020-11-20T03:00:00Z',FALSE ,'cursos/Bootcamp JAVA',1)
 
 INSERT INTO tb_course (name, img_Uri, img_Gray_Uri) VALUES ('Bootcamp HTML','https://c.pxhere.com/images/07/b2/f8ed07d6f1a9c740e7703cbb99ee-1443423.jpg!d','https://imagehost9.online-image-editor.com/oie_upload/images/2815344s1CPifwU05/2817328XFF47ZGy.jpg');
 INSERT INTO tb_course (name, img_Uri, img_Gray_Uri) VALUES ('Bootcamp JAVA','https://c.pxhere.com/images/07/b2/f8ed07d6f1a9c740e7703cbb99ee-1443423.jpg!d','https://imagehost9.online-image-editor.com/oie_upload/images/2815344s1CPifwU05/2817328XFF47ZGy.jpg');
@@ -31,4 +31,5 @@ INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prer
 INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 2', 'Tags', 2,'https://c.pxhere.com/images/07/b2/f8ed07d6f1a9c740e7703cbb99ee-1443423.jpg!d', 1, 1);
 INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 3', 'Ancoras', 3,'https://c.pxhere.com/images/07/b2/f8ed07d6f1a9c740e7703cbb99ee-1443423.jpg!d', 1, 2);
 
-INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refound_Moment, avaliable; only_Update) VALUES ( 1, 1, TIMESTAMP WITH TIME ZONE '2020-11-20T03:00:00Z',TIMESTAMP WITH TIME ZONE '2020-12-19T03:00:00Z','TRUE','FALSE');
+INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refound_Moment, available, only_Update) VALUES ( 1, 1, TIMESTAMP WITH TIME ZONE '2020-11-20T13:00:00Z',null,TRUE,FALSE);
+INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refound_Moment, available, only_Update) VALUES ( 2, 1, TIMESTAMP WITH TIME ZONE '2020-11-20T13:00:00Z',null,TRUE,FALSE);

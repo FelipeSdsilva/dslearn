@@ -1,6 +1,7 @@
 package com.devsuperior.dslearnbds.entities;
 
 import java.time.Instant;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
@@ -21,13 +22,14 @@ public class Enrollment {
 	
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant refoundMoment;
-	private boolean avaliable;
+	private boolean available;
 	private boolean onlyUpdate;
 
+	
 	public Enrollment() {
 	}
 
-	public Enrollment(User user, Offer offer, Instant enrollMoment, Instant refoundMoment, boolean avaliable,
+	public Enrollment(User user, Offer offer, Instant enrollMoment, Instant refoundMoment, boolean available,
 			boolean onlyUpdate) {
 		super();
 		id.setUser(user);
@@ -35,7 +37,7 @@ public class Enrollment {
 		;
 		this.enrollMoment = enrollMoment;
 		this.refoundMoment = refoundMoment;
-		this.avaliable = avaliable;
+		this.available = available;
 		this.onlyUpdate = onlyUpdate;
 	}
 
@@ -71,12 +73,12 @@ public class Enrollment {
 		this.refoundMoment = refoundMoment;
 	}
 
-	public boolean isAvaliable() {
-		return avaliable;
+	public boolean isavailable() {
+		return available;
 	}
 
-	public void setAvaliable(boolean avaliable) {
-		this.avaliable = avaliable;
+	public void setavailable(boolean available) {
+		this.available = available;
 	}
 
 	public boolean isOnlyUpdate() {
