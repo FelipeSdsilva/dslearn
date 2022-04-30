@@ -3,13 +3,23 @@ package com.devsuperior.dslearnbds.entities.pk;
 import java.io.Serializable;
 import java.util.Objects;
 
+import javax.persistence.Embeddable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
 import com.devsuperior.dslearnbds.entities.Offer;
 import com.devsuperior.dslearnbds.entities.User;
 
-	public class EnrollmentPK implements Serializable {
-		private static final long serialVersionUID = 1L;
+@Embeddable
+public class EnrollmentPK implements Serializable {
+	private static final long serialVersionUID = 1L;
 
+	@ManyToOne
+	@JoinColumn(name = "user_id")
 	private User user;
+
+	@ManyToOne
+	@JoinColumn(name = "offer_id")
 	private Offer offer;
 
 	public EnrollmentPK() {
@@ -53,7 +63,5 @@ import com.devsuperior.dslearnbds.entities.User;
 		EnrollmentPK other = (EnrollmentPK) obj;
 		return Objects.equals(offer, other.offer) && Objects.equals(user, other.user);
 	}
-	
-	
 
 }
