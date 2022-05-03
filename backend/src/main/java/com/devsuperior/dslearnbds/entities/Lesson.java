@@ -48,6 +48,8 @@ public abstract class Lesson implements Serializable {
 	@OneToMany(mappedBy = "lesson")
 	private List<Deliver> deliveries = new ArrayList<>();
 	
+	@OneToMany(mappedBy = "lesson")
+	private List<Topic> topics = new ArrayList<>();
 	public Lesson() {
 	}
 
@@ -97,6 +99,10 @@ public abstract class Lesson implements Serializable {
 	
 	public List<Deliver> getDeliveries() {
 		return deliveries;
+	}
+
+	public List<Topic> getTopics() {
+		return topics;
 	}
 
 	@Override
