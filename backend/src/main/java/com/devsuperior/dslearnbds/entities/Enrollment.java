@@ -44,7 +44,6 @@ public class Enrollment {
 		super();
 		id.setUser(user);
 		id.setOffer(offer);
-		;
 		this.enrollMoment = enrollMoment;
 		this.refoundMoment = refoundMoment;
 		this.available = available;
