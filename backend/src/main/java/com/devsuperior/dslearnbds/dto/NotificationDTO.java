@@ -13,28 +13,28 @@ public class NotificationDTO implements Serializable {
 	private Instant moment;
 	private boolean read;
 	private String route;
-
-	private UserDTO userDTO;
+	private Long userId;
 
 	public NotificationDTO() {
 	}
 
-	public NotificationDTO(Long id, String text, Instant moment, boolean read, String route, UserDTO userDTO) {
+	public NotificationDTO(Long id, String text, Instant moment, boolean read, String route, Long userId) {
 		super();
 		this.id = id;
 		this.text = text;
 		this.moment = moment;
 		this.read = read;
 		this.route = route;
-		this.userDTO = userDTO;
+		this.userId = userId;
 	}
 
 	public NotificationDTO(Notification entity) {
-		this.id = entity.getId();
-		this.text = entity.getText();
-		this.moment = entity.getMoment();
-		this.read = entity.getRead();
-		this.route = entity.getRoute();
+		id = entity.getId();
+		text = entity.getText();
+		moment = entity.getMoment();
+		read = entity.isRead();
+		route = entity.getRoute();
+		userId = entity.getUser().getId();
 	}
 
 	public Long getId() {
@@ -77,12 +77,11 @@ public class NotificationDTO implements Serializable {
 		this.route = route;
 	}
 
-	public UserDTO getUserDTO() {
-		return userDTO;
+	public Long getUserId() {
+		return userId;
 	}
 
-	public void setUserDTO(UserDTO userDTO) {
-		this.userDTO = userDTO;
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
-
 }
