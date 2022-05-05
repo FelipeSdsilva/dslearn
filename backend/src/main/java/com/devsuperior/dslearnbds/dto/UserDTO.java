@@ -32,7 +32,6 @@ public class UserDTO implements Serializable {
 		entity.getRoles().forEach(role -> this.roles.add(new RoleDTO(role)));
 	}
 	
-
 	public Long getId() {
 		return id;
 	}
