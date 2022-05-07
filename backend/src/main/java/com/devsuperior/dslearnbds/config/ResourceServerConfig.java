@@ -23,7 +23,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter{
 	@Autowired
 	private JwtTokenStore tokenStore;
 	
-	private static final String[] PUBLIC = {"/oauth/token","/h2-console/**","/users/**"};
+	private static final String[] PUBLIC = {"/oauth/token","/h2-console/**"};
 	
 	
 	@Override
@@ -40,6 +40,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter{
 		}  
 		
 		http.authorizeRequests()
+		.antMatchers(PUBLIC).permitAll()
 		.anyRequest().authenticated();
 	}
 
